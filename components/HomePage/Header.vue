@@ -1,11 +1,7 @@
 <template>
-  <header>
-    <nav>
-      <h1>KOFFIE</h1>
-      <ul>
-        <li @click="onSignButtonClicked">Sign In</li>
-        <li @click="onSignButtonClicked">Sign Up</li>
-      </ul>
+  <header class="w-full">
+    <nav class="px-8 py-4 rounded-br-[40px] w-max bg-redwood">
+      <h1 class="text-2xl text-white font-shrimp">KOFFIE</h1>
     </nav>
   </header>
 </template>
@@ -19,9 +15,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-div {
-  color: $redwood;
-}
-</style>

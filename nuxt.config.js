@@ -14,7 +14,21 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+      },
+      {
+        href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap',
+        rel: 'stylesheet',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -30,13 +44,13 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -49,12 +63,5 @@ export default {
         ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
       ],
     },
-  },
-  styleResources: {
-    scss: [
-      '~/assets/scss/_variables.scss',
-      '~/assets/scss/_media.scss',
-      '~/assets/scss/_mixins.scss',
-    ],
   },
 }
